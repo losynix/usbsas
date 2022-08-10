@@ -2937,7 +2937,7 @@ dependencies = [
 
 [[package]]
 name = "usbsas-dev2scsi"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "bootsector",
  "byteorder 1.4.3",
@@ -3057,7 +3057,7 @@ dependencies = [
 
 [[package]]
 name = "usbsas-mass-storage"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "log",
  "lru",
@@ -3150,7 +3150,7 @@ dependencies = [
 
 [[package]]
 name = "usbsas-scsi2files"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "byteorder 1.4.3",
  "env_logger 0.9.0",
@@ -3168,7 +3168,7 @@ dependencies = [
 
 [[package]]
 name = "usbsas-server"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "actix-files",
  "actix-web",
@@ -3259,7 +3259,7 @@ dependencies = [
 
 [[package]]
 name = "usbsas-usbsas"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "clap 3.2.16",
  "log",
@@ -3594,9 +3594,9 @@ dependencies = [
 
 [[package]]
 name = "x11"
-version = "2.19.1"
+version = "2.20.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6dd0565fa8bfba8c5efe02725b14dff114c866724eff2cfd44d76cea74bcd87a"
+checksum = "f7ae97874a928d821b061fce3d1fc52f08071dd53c89a6102bc06efcac3b2908"
 dependencies = [
  "libc",
  "pkg-config",
