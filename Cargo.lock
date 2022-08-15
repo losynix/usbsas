@@ -1731,14 +1731,16 @@ dependencies = [
 
 [[package]]
 name = "nix"
-version = "0.24.2"
+version = "0.25.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "195cdbc1741b8134346d515b3a56a1c94b0912758009cfd53f99ea0f57b065fc"
+checksum = "e322c04a9e3440c327fca7b6c8a63e6890a32fa2ad689db972425f07e0d22abb"
 dependencies = [
+ "autocfg",
  "bitflags",
  "cfg-if",
  "libc",
  "memoffset",
+ "pin-utils",
 ]
 
 [[package]]
@@ -2937,7 +2939,7 @@ dependencies = [
 
 [[package]]
 name = "usbsas-dev2scsi"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "bootsector",
  "byteorder 1.4.3",
@@ -3057,7 +3059,7 @@ dependencies = [
 
 [[package]]
 name = "usbsas-mass-storage"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "log",
  "lru",
@@ -3125,7 +3127,7 @@ version = "0.1.0"
 dependencies = [
  "libc",
  "log",
- "nix 0.24.2",
+ "nix 0.25.0",
  "thiserror",
  "usbsas-comm",
  "usbsas-utils",
@@ -3150,7 +3152,7 @@ dependencies = [
 
 [[package]]
 name = "usbsas-scsi2files"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "byteorder 1.4.3",
  "env_logger 0.9.0",
@@ -3168,7 +3170,7 @@ dependencies = [
 
 [[package]]
 name = "usbsas-server"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "actix-files",
  "actix-web",
@@ -3180,7 +3182,7 @@ dependencies = [
  "hmac",
  "log",
  "mac_address",
- "nix 0.24.2",
+ "nix 0.25.0",
  "rand",
  "reqwest",
  "serde",
@@ -3259,7 +3261,7 @@ dependencies = [
 
 [[package]]
 name = "usbsas-usbsas"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "clap 3.2.16",
  "log",
