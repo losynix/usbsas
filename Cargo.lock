@@ -2382,18 +2382,18 @@ checksum = "a2333e6df6d6598f2b1974829f853c2b4c5f4a6e503c10af918081aa6f8564e1"
 
 [[package]]
 name = "serde"
-version = "1.0.142"
+version = "1.0.144"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e590c437916fb6b221e1d00df6e3294f3fccd70ca7e92541c475d6ed6ef5fee2"
+checksum = "0f747710de3dcd43b88c9168773254e809d8ddbdf9653b84e2554ab219f17860"
 dependencies = [
  "serde_derive",
 ]
 
 [[package]]
 name = "serde_derive"
-version = "1.0.142"
+version = "1.0.144"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "34b5b8d809babe02f538c2cfec6f2c1ed10804c0e5a6a041a049a4f5588ccc2e"
+checksum = "94ed3a816fb1d101812f83e789f888322c34e291f894f19590dc310963e87a00"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -2937,7 +2937,7 @@ dependencies = [
 
 [[package]]
 name = "usbsas-dev2scsi"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "bootsector",
  "byteorder 1.4.3",
@@ -3057,7 +3057,7 @@ dependencies = [
 
 [[package]]
 name = "usbsas-mass-storage"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "log",
  "lru",
@@ -3150,7 +3150,7 @@ dependencies = [
 
 [[package]]
 name = "usbsas-scsi2files"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "byteorder 1.4.3",
  "env_logger 0.9.0",
@@ -3168,7 +3168,7 @@ dependencies = [
 
 [[package]]
 name = "usbsas-server"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "actix-files",
  "actix-web",
@@ -3259,7 +3259,7 @@ dependencies = [
 
 [[package]]
 name = "usbsas-usbsas"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "clap 3.2.16",
  "log",
