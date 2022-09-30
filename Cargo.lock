@@ -1510,9 +1510,9 @@ dependencies = [
 
 [[package]]
 name = "libc"
-version = "0.2.127"
+version = "0.2.134"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "505e71a4706fa491e9b1b55f51b95d4037d0821ee40131190475f692b35b009b"
+checksum = "329c933548736bc49fd575ee68c89e8be4d260064184389a5b77517cddd99ffb"
 
 [[package]]
 name = "libdbus-sys"
@@ -2937,7 +2937,7 @@ dependencies = [
 
 [[package]]
 name = "usbsas-dev2scsi"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "bootsector",
  "byteorder 1.4.3",
@@ -3057,7 +3057,7 @@ dependencies = [
 
 [[package]]
 name = "usbsas-mass-storage"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "log",
  "lru",
@@ -3150,7 +3150,7 @@ dependencies = [
 
 [[package]]
 name = "usbsas-scsi2files"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "byteorder 1.4.3",
  "env_logger 0.9.0",
@@ -3168,7 +3168,7 @@ dependencies = [
 
 [[package]]
 name = "usbsas-server"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "actix-files",
  "actix-web",
@@ -3259,7 +3259,7 @@ dependencies = [
 
 [[package]]
 name = "usbsas-usbsas"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "clap 3.2.16",
  "log",
