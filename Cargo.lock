@@ -648,9 +648,9 @@ dependencies = [
 
 [[package]]
 name = "clap"
-version = "4.0.10"
+version = "4.0.23"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3b1a0a4208c6c483b952ad35c6eed505fc13b46f08f631b81e828084a9318d74"
+checksum = "0eb41c13df48950b20eb4cd0eefa618819469df1bffc49d11e8487c4ba0037e5"
 dependencies = [
  "atty",
  "bitflags",
@@ -3133,7 +3133,7 @@ dependencies = [
  "actix-web",
  "assert_cmd",
  "base64",
- "clap 4.0.10",
+ "clap 4.0.23",
  "err-derive",
  "futures",
  "hmac",
@@ -3178,7 +3178,7 @@ dependencies = [
 name = "usbsas-tools"
 version = "0.1.0"
 dependencies = [
- "clap 4.0.10",
+ "clap 4.0.23",
  "env_logger 0.9.1",
  "fuse_mt",
  "indicatif",
@@ -3220,7 +3220,7 @@ dependencies = [
 name = "usbsas-usbsas"
 version = "0.1.1"
 dependencies = [
- "clap 4.0.10",
+ "clap 4.0.23",
  "log",
  "thiserror",
  "usbsas-cmdexec",
