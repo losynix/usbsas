@@ -305,7 +305,7 @@ version = "0.2.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d9b39be18770d11421cdb1b9947a45dd3f37e93092cbf377614828a319d5fee8"
 dependencies = [
- "hermit-abi",
+ "hermit-abi 0.1.19",
  "libc",
  "winapi",
 ]
@@ -355,7 +355,7 @@ dependencies = [
  "cexpr 0.6.0",
  "clang-sys",
  "clap 2.34.0",
- "env_logger 0.9.1",
+ "env_logger 0.9.3",
  "lazy_static",
  "lazycell",
  "log",
@@ -378,7 +378,7 @@ dependencies = [
  "cexpr 0.6.0",
  "clang-sys",
  "clap 3.2.22",
- "env_logger 0.9.1",
+ "env_logger 0.9.3",
  "lazy_static",
  "lazycell",
  "log",
@@ -896,12 +896,25 @@ dependencies = [
 
 [[package]]
 name = "env_logger"
-version = "0.9.1"
+version = "0.9.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c90bf5f19754d10198ccb95b70664fc925bd1fc090a0fd9a6ebc54acc8cd6272"
+checksum = "a12e6657c4c97ebab115a42dcee77225f7f482cdd841cf7088c657a42e9e00e7"
 dependencies = [
  "atty",
  "humantime",
+ "log",
+ "regex",
+ "termcolor",
+]
+
+[[package]]
+name = "env_logger"
+version = "0.10.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "85cdab6a89accf66733ad5a1693a4dcced6aeff64602b634530dd73c1f3ee9f0"
+dependencies = [
+ "humantime",
+ "is-terminal",
  "log",
  "regex",
  "termcolor",
@@ -982,7 +995,7 @@ dependencies = [
  "cfg-if",
  "libc",
  "redox_syscall",
- "windows-sys",
+ "windows-sys 0.36.1",
 ]
 
 [[package]]
@@ -1254,6 +1267,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "hermit-abi"
+version = "0.2.6"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ee512640fe35acbfb4bb779db6f0d80704c2cacfa2e39b601ef3e3f47d1ae4c7"
+dependencies = [
+ "libc",
+]
+
+[[package]]
 name = "hex"
 version = "0.4.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1265,7 +1287,7 @@ version = "0.1.0"
 dependencies = [
  "dbus",
  "dbus-crossroads",
- "env_logger 0.9.1",
+ "env_logger 0.10.0",
  "err-derive",
  "lazy_static",
  "log",
@@ -1276,7 +1298,7 @@ name = "hid-user"
 version = "0.1.0"
 dependencies = [
  "bitfield",
- "env_logger 0.9.1",
+ "env_logger 0.10.0",
  "log",
  "rusb",
  "x11",
@@ -1421,10 +1443,32 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1ea37f355c05dde75b84bba2d767906ad522e97cd9e2eef2be7a4ab7fb442c06"
 
 [[package]]
+name = "io-lifetimes"
+version = "1.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a7d367024b3f3414d8e01f437f704f41a9f64ab36f9067fa73e526ad4c763c87"
+dependencies = [
+ "libc",
+ "windows-sys 0.42.0",
+]
+
+[[package]]
 name = "ipnet"
 version = "2.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "879d54834c8c76457ef4293a689b2a8c59b076067ad77b15efafbb05f92a592b"
+
+[[package]]
+name = "is-terminal"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "aae5bc6e2eb41c9def29a3e0f1306382807764b9b53112030eff57435667352d"
+dependencies = [
+ "hermit-abi 0.2.6",
+ "io-lifetimes 1.0.1",
+ "rustix 0.36.3",
+ "windows-sys 0.42.0",
+]
 
 [[package]]
 name = "iso9660"
@@ -1565,6 +1609,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d4d2456c373231a208ad294c33dc5bff30051eafd954cd4caae83a712b12854d"
 
 [[package]]
+name = "linux-raw-sys"
+version = "0.1.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8f9f08d8963a6c613f4b1a78f4f4a4dbfadf8e6545b2d72861731e4858b8b47f"
+
+[[package]]
 name = "local-channel"
 version = "0.1.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1675,7 +1725,7 @@ dependencies = [
  "libc",
  "log",
  "wasi",
- "windows-sys",
+ "windows-sys 0.36.1",
 ]
 
 [[package]]
@@ -1783,7 +1833,7 @@ version = "1.13.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "19e64526ebdee182341572e50e9ad03965aa510cd94427a4549448f285e957a1"
 dependencies = [
- "hermit-abi",
+ "hermit-abi 0.1.19",
  "libc",
 ]
 
@@ -1911,7 +1961,7 @@ dependencies = [
  "libc",
  "redox_syscall",
  "smallvec",
- "windows-sys",
+ "windows-sys 0.36.1",
 ]
 
 [[package]]
@@ -2047,7 +2097,7 @@ dependencies = [
  "byteorder",
  "hex",
  "lazy_static",
- "rustix",
+ "rustix 0.35.9",
 ]
 
 [[package]]
@@ -2265,10 +2315,24 @@ checksum = "72c825b8aa8010eb9ee99b75f05e10180b9278d161583034d7574c9d617aeada"
 dependencies = [
  "bitflags",
  "errno",
- "io-lifetimes",
+ "io-lifetimes 0.7.3",
  "libc",
- "linux-raw-sys",
- "windows-sys",
+ "linux-raw-sys 0.0.46",
+ "windows-sys 0.36.1",
+]
+
+[[package]]
+name = "rustix"
+version = "0.36.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0b1fbb4dfc4eb1d390c02df47760bb19a84bb80b301ecc947ab5406394d8223e"
+dependencies = [
+ "bitflags",
+ "errno",
+ "io-lifetimes 1.0.1",
+ "libc",
+ "linux-raw-sys 0.1.3",
+ "windows-sys 0.42.0",
 ]
 
 [[package]]
@@ -2290,7 +2354,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "88d6731146462ea25d9244b2ed5fd1d716d25c52e4d54aa4fb0f3c4e9854dbe2"
 dependencies = [
  "lazy_static",
- "windows-sys",
+ "windows-sys 0.36.1",
 ]
 
 [[package]]
@@ -2852,7 +2916,7 @@ version = "0.1.0"
 dependencies = [
  "actix-web",
  "clamav-rs",
- "env_logger 0.9.1",
+ "env_logger 0.10.0",
  "futures",
  "log",
  "serde",
@@ -2866,7 +2930,7 @@ dependencies = [
 name = "usbsas-cmdexec"
 version = "0.1.0"
 dependencies = [
- "env_logger 0.9.1",
+ "env_logger 0.10.0",
  "log",
  "thiserror",
  "usbsas-comm",
@@ -2900,7 +2964,7 @@ version = "0.1.1"
 dependencies = [
  "bootsector",
  "byteorder",
- "env_logger 0.9.1",
+ "env_logger 0.10.0",
  "log",
  "rusb",
  "thiserror",
@@ -2917,7 +2981,7 @@ name = "usbsas-files2fs"
 version = "0.1.0"
 dependencies = [
  "bitvec 1.0.1",
- "env_logger 0.9.1",
+ "env_logger 0.10.0",
  "fscommon",
  "log",
  "thiserror",
@@ -2935,7 +2999,7 @@ name = "usbsas-files2tar"
 version = "0.1.0"
 dependencies = [
  "byteorder",
- "env_logger 0.9.1",
+ "env_logger 0.10.0",
  "log",
  "serde_json",
  "tar",
@@ -2953,7 +3017,7 @@ dependencies = [
 name = "usbsas-filter"
 version = "0.1.0"
 dependencies = [
- "env_logger 0.9.1",
+ "env_logger 0.10.0",
  "log",
  "serde",
  "thiserror",
@@ -2971,7 +3035,7 @@ version = "0.1.0"
 dependencies = [
  "bitvec 1.0.1",
  "byteorder",
- "env_logger 0.9.1",
+ "env_logger 0.10.0",
  "log",
  "rusb",
  "thiserror",
@@ -3006,7 +3070,7 @@ dependencies = [
 name = "usbsas-identificator"
 version = "0.1.0"
 dependencies = [
- "env_logger 0.9.1",
+ "env_logger 0.10.0",
  "log",
  "thiserror",
  "usbsas-comm",
@@ -3054,7 +3118,7 @@ name = "usbsas-net"
 version = "0.1.0"
 dependencies = [
  "base64",
- "env_logger 0.9.1",
+ "env_logger 0.10.0",
  "libgssapi",
  "log",
  "reqwest",
@@ -3112,7 +3176,7 @@ name = "usbsas-scsi2files"
 version = "0.1.1"
 dependencies = [
  "byteorder",
- "env_logger 0.9.1",
+ "env_logger 0.10.0",
  "log",
  "thiserror",
  "usbsas-comm",
@@ -3163,7 +3227,7 @@ name = "usbsas-tar2files"
 version = "0.1.0"
 dependencies = [
  "byteorder",
- "env_logger 0.9.1",
+ "env_logger 0.10.0",
  "log",
  "tar",
  "thiserror",
@@ -3179,7 +3243,7 @@ name = "usbsas-tools"
 version = "0.1.0"
 dependencies = [
  "clap 4.0.10",
- "env_logger 0.9.1",
+ "env_logger 0.10.0",
  "fuse_mt",
  "indicatif",
  "libc",
@@ -3204,7 +3268,7 @@ dependencies = [
 name = "usbsas-usbdev"
 version = "0.1.0"
 dependencies = [
- "env_logger 0.9.1",
+ "env_logger 0.10.0",
  "log",
  "rusb",
  "thiserror",
@@ -3246,7 +3310,7 @@ dependencies = [
 name = "usbsas-utils"
 version = "0.1.0"
 dependencies = [
- "env_logger 0.9.1",
+ "env_logger 0.10.0",
  "log",
  "serde_json",
  "thiserror",
@@ -3459,18 +3523,45 @@ version = "0.36.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ea04155a16a59f9eab786fe12a4a450e75cdb175f9e0d80da1e17db09f55b8d2"
 dependencies = [
- "windows_aarch64_msvc",
- "windows_i686_gnu",
- "windows_i686_msvc",
- "windows_x86_64_gnu",
- "windows_x86_64_msvc",
+ "windows_aarch64_msvc 0.36.1",
+ "windows_i686_gnu 0.36.1",
+ "windows_i686_msvc 0.36.1",
+ "windows_x86_64_gnu 0.36.1",
+ "windows_x86_64_msvc 0.36.1",
 ]
+
+[[package]]
+name = "windows-sys"
+version = "0.42.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5a3e1820f08b8513f676f7ab6c1f99ff312fb97b553d30ff4dd86f9f15728aa7"
+dependencies = [
+ "windows_aarch64_gnullvm",
+ "windows_aarch64_msvc 0.42.0",
+ "windows_i686_gnu 0.42.0",
+ "windows_i686_msvc 0.42.0",
+ "windows_x86_64_gnu 0.42.0",
+ "windows_x86_64_gnullvm",
+ "windows_x86_64_msvc 0.42.0",
+]
+
+[[package]]
+name = "windows_aarch64_gnullvm"
+version = "0.42.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "41d2aa71f6f0cbe00ae5167d90ef3cfe66527d6f613ca78ac8024c3ccab9a19e"
 
 [[package]]
 name = "windows_aarch64_msvc"
 version = "0.36.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9bb8c3fd39ade2d67e9874ac4f3db21f0d710bee00fe7cab16949ec184eeaa47"
+
+[[package]]
+name = "windows_aarch64_msvc"
+version = "0.42.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "dd0f252f5a35cac83d6311b2e795981f5ee6e67eb1f9a7f64eb4500fbc4dcdb4"
 
 [[package]]
 name = "windows_gen"
@@ -3485,10 +3576,22 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "180e6ccf01daf4c426b846dfc66db1fc518f074baa793aa7d9b9aaeffad6a3b6"
 
 [[package]]
+name = "windows_i686_gnu"
+version = "0.42.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fbeae19f6716841636c28d695375df17562ca208b2b7d0dc47635a50ae6c5de7"
+
+[[package]]
 name = "windows_i686_msvc"
 version = "0.36.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e2e7917148b2812d1eeafaeb22a97e4813dfa60a3f8f78ebe204bcc88f12f024"
+
+[[package]]
+name = "windows_i686_msvc"
+version = "0.42.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "84c12f65daa39dd2babe6e442988fc329d6243fdce47d7d2d155b8d874862246"
 
 [[package]]
 name = "windows_macros"
@@ -3507,10 +3610,28 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4dcd171b8776c41b97521e5da127a2d86ad280114807d0b2ab1e462bc764d9e1"
 
 [[package]]
+name = "windows_x86_64_gnu"
+version = "0.42.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bf7b1b21b5362cbc318f686150e5bcea75ecedc74dd157d874d754a2ca44b0ed"
+
+[[package]]
+name = "windows_x86_64_gnullvm"
+version = "0.42.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "09d525d2ba30eeb3297665bd434a54297e4170c7f1a44cad4ef58095b4cd2028"
+
+[[package]]
 name = "windows_x86_64_msvc"
 version = "0.36.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c811ca4a8c853ef420abd8592ba53ddbbac90410fab6903b3e79972a631f7680"
+
+[[package]]
+name = "windows_x86_64_msvc"
+version = "0.42.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f40009d85759725a34da6d89a94e63d7bdc50a862acf0dbc7c8e488f1edcb6f5"
 
 [[package]]
 name = "winreg"
