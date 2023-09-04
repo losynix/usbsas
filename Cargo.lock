@@ -450,7 +450,7 @@ dependencies = [
  "lazycell",
  "log",
  "peeking_take_while",
- "prettyplease 0.2.4",
+ "prettyplease",
  "proc-macro2",
  "quote",
  "regex",
@@ -2102,16 +2102,6 @@ dependencies = [
 
 [[package]]
 name = "prettyplease"
-version = "0.1.25"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6c8646e95016a7a6c4adea95bafa8a16baab64b583356217f2c85db4a39d9a86"
-dependencies = [
- "proc-macro2",
- "syn 1.0.109",
-]
-
-[[package]]
-name = "prettyplease"
 version = "0.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1ceca8aaf45b5c46ec7ed39fff75f57290368c1846d33d24a122ca81416ab058"
@@ -2173,27 +2163,37 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0b82eaa1d779e9a4bc1c3217db8ffbeabaae1dca241bf70183242128d48681cd"
 dependencies = [
  "bytes",
- "prost-derive",
+ "prost-derive 0.11.9",
+]
+
+[[package]]
+name = "prost"
+version = "0.12.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "aa8473a65b88506c106c28ae905ca4a2b83a2993640467a41bb3080627ddfd2c"
+dependencies = [
+ "bytes",
+ "prost-derive 0.12.0",
 ]
 
 [[package]]
 name = "prost-build"
-version = "0.11.9"
+version = "0.12.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "119533552c9a7ffacc21e099c24a0ac8bb19c2a2a3f363de84cd9b844feab270"
+checksum = "30d3e647e9eb04ddfef78dfee2d5b3fefdf94821c84b710a3d8ebc89ede8b164"
 dependencies = [
  "bytes",
  "heck 0.4.1",
  "itertools",
- "lazy_static",
  "log",
  "multimap",
+ "once_cell",
  "petgraph",
- "prettyplease 0.1.25",
- "prost",
+ "prettyplease",
+ "prost 0.12.0",
  "prost-types",
  "regex",
- "syn 1.0.109",
+ "syn 2.0.15",
  "tempfile",
  "which 4.4.0",
 ]
@@ -2212,12 +2212,25 @@ dependencies = [
 ]
 
 [[package]]
-name = "prost-types"
-version = "0.11.9"
+name = "prost-derive"
+version = "0.12.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "213622a1460818959ac1181aaeb2dc9c7f63df720db7d788b3e24eacd1983e13"
+checksum = "56075c27b20ae524d00f247b8a4dc333e5784f889fe63099f8e626bc8d73486c"
 dependencies = [
- "prost",
+ "anyhow",
+ "itertools",
+ "proc-macro2",
+ "quote",
+ "syn 2.0.15",
+]
+
+[[package]]
+name = "prost-types"
+version = "0.12.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cebe0a918c97f86c217b0f76fd754e966f8b9f41595095cf7d74cb4e59d730f6"
+dependencies = [
+ "prost 0.12.0",
 ]
 
 [[package]]
@@ -3054,7 +3067,7 @@ name = "usbsas-comm"
 version = "0.1.0"
 dependencies = [
  "byteorder",
- "prost",
+ "prost 0.11.9",
  "usbsas-utils",
 ]
 
@@ -3247,7 +3260,7 @@ dependencies = [
 name = "usbsas-proto"
 version = "0.1.3"
 dependencies = [
- "prost",
+ "prost 0.11.9",
  "prost-build",
 ]
 
