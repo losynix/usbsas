@@ -158,7 +158,6 @@ pub enum Error {
     AnalyzeTimeout(u64),
     #[error("State error")]
     State,
-
     #[error("{0}")]
     Upload(String),
 }
